@@ -8,11 +8,14 @@ Public Class Form1
         Else
             lblMessage.Text = "not success"
         End If
+
+        ' Responsible for deleting buttons
         For j = Me.Controls.Count - 1 To 0 Step -1
             If Me.Controls(j).Name.Length > 10 AndAlso Me.Controls(j).Name.Substring(0, 10) = "New Button" Then
                 Me.Controls.RemoveAt(j)
             End If
         Next
+        'Runtime code
         For i = 1 To Integer.Parse(txtnum.Text)
             'MessageBox.Show("making button " + i.ToString)
             Dim nextbutton As Button
@@ -31,6 +34,7 @@ Public Class Form1
     Private Sub newbuttonclick(sender As Object, e As EventArgs)
         '  MessageBox.Show("a button was clicked")
         Dim clickbutton As Button
+        ' casting
         clickbutton = CType(sender, Button)
         ' MessageBox.Show(clickbutton.Name)
         Dim number As Integer
