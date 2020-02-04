@@ -28,7 +28,6 @@ Partial Class Form1
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLoginIn = New System.Windows.Forms.Button()
-        Me.lblMessage = New System.Windows.Forms.Label()
         Me.txtnum = New System.Windows.Forms.TextBox()
         Me.txtsum = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -91,15 +90,6 @@ Partial Class Form1
         Me.btnLoginIn.Text = "Generate Buttons"
         Me.btnLoginIn.UseVisualStyleBackColor = False
         '
-        'lblMessage
-        '
-        Me.lblMessage.AutoSize = True
-        Me.lblMessage.Location = New System.Drawing.Point(41, 187)
-        Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(39, 13)
-        Me.lblMessage.TabIndex = 5
-        Me.lblMessage.Text = "Label3"
-        '
         'txtnum
         '
         Me.txtnum.Location = New System.Drawing.Point(215, 151)
@@ -123,7 +113,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(661, 209)
         Me.Controls.Add(Me.txtsum)
         Me.Controls.Add(Me.txtnum)
-        Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.btnLoginIn)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label2)
@@ -143,7 +132,6 @@ Partial Class Form1
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLoginIn As Button
-    Friend WithEvents lblMessage As Label
     Friend WithEvents txtnum As TextBox
     Friend WithEvents txtsum As TextBox
 End Class
