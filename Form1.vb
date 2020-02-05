@@ -1,20 +1,10 @@
 ﻿Option Strict Off
 
 Public Class Form1
-    Private Sub xyz(sender As Object, e As EventArgs) Handles btnLoginIn.Click, Label1.Click
+    Private Sub xyz(sender As Object, e As EventArgs) Handles btnLoginIn.Click
 
-        If txtUsername.Text.ToLower = txtPassword.Text.ToLower Then
-            lblMessage.Text = "success"
-        Else
-            lblMessage.Text = "not success"
-        End If
 
-        ' Responsible for deleting buttons
-        For j = Me.Controls.Count - 1 To 0 Step -1
-            If Me.Controls(j).Name.Length > 10 AndAlso Me.Controls(j).Name.Substring(0, 10) = "New Button" Then
-                Me.Controls.RemoveAt(j)
-            End If
-        Next
+
         'Runtime code
         For i = 1 To Integer.Parse(txtnum.Text)
             'MessageBox.Show("making button " + i.ToString)
