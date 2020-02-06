@@ -24,14 +24,14 @@ Public Class Form1
                 End If
 
                 Lblsquare.Location = New System.Drawing.Point(Xaxis, Yaxis)
-                Lblsquare.Size = New System.Drawing.Size(30, 30)
-                Lblsquare.Size = New System.Drawing.Size(30, 30)
+                Lblsquare.Size = New System.Drawing.Size(15, 15)
+                Lblsquare.Size = New System.Drawing.Size(15, 15)
 
                 Me.Controls.Add(Lblsquare)
-                Xaxis = Xaxis + 30
+                Xaxis = Xaxis + 15
                 blue = Not blue
             Next
-            Yaxis = Yaxis + 30
+            Yaxis = Yaxis + 15
 
 
         Next
