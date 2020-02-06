@@ -24,21 +24,26 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddSourceControlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MMUEdit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.ChangeBackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MMUEdit, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(661, 24)
@@ -47,16 +52,54 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.AddSourceControlToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
-        'EditToolStripMenuItem
+        'OpenToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
+        Me.OpenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenFolderToolStripMenuItem, Me.OpenFileToolStripMenuItem})
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenToolStripMenuItem.Text = "Open"
+        '
+        'OpenFolderToolStripMenuItem
+        '
+        Me.OpenFolderToolStripMenuItem.Name = "OpenFolderToolStripMenuItem"
+        Me.OpenFolderToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.OpenFolderToolStripMenuItem.Text = "Open Folder"
+        '
+        'OpenFileToolStripMenuItem
+        '
+        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.OpenFileToolStripMenuItem.Text = "Open File"
+        '
+        'AddSourceControlToolStripMenuItem
+        '
+        Me.AddSourceControlToolStripMenuItem.Name = "AddSourceControlToolStripMenuItem"
+        Me.AddSourceControlToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddSourceControlToolStripMenuItem.Text = "Add Source control"
+        '
+        'MMUEdit
+        '
+        Me.MMUEdit.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.ChangeBackgroundColorToolStripMenuItem})
+        Me.MMUEdit.Name = "MMUEdit"
+        Me.MMUEdit.Size = New System.Drawing.Size(39, 20)
+        Me.MMUEdit.Text = "Edit"
+        '
+        'UndoToolStripMenuItem
+        '
+        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UndoToolStripMenuItem.Text = "Undo"
+        '
+        'RedoToolStripMenuItem
+        '
+        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RedoToolStripMenuItem.Text = "Redo"
         '
         'ViewToolStripMenuItem
         '
@@ -64,6 +107,12 @@ Partial Class Form1
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'FullScreenToolStripMenuItem
+        '
+        Me.FullScreenToolStripMenuItem.Name = "FullScreenToolStripMenuItem"
+        Me.FullScreenToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.FullScreenToolStripMenuItem.Text = "FullScreen"
         '
         'ToolsToolStripMenuItem
         '
@@ -78,43 +127,24 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'OpenToolStripMenuItem
-        '
-        Me.OpenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenFolderToolStripMenuItem, Me.OpenFileToolStripMenuItem})
-        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpenToolStripMenuItem.Text = "Open"
-        '
-        'OpenFolderToolStripMenuItem
-        '
-        Me.OpenFolderToolStripMenuItem.Name = "OpenFolderToolStripMenuItem"
-        Me.OpenFolderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpenFolderToolStripMenuItem.Text = "Open Folder"
-        '
-        'OpenFileToolStripMenuItem
-        '
-        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
-        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpenFileToolStripMenuItem.Text = "Open File"
-        '
-        'FullScreenToolStripMenuItem
-        '
-        Me.FullScreenToolStripMenuItem.Name = "FullScreenToolStripMenuItem"
-        Me.FullScreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.FullScreenToolStripMenuItem.Text = "FullScreen"
-        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'ChangeBackgroundColorToolStripMenuItem
+        '
+        Me.ChangeBackgroundColorToolStripMenuItem.Name = "ChangeBackgroundColorToolStripMenuItem"
+        Me.ChangeBackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.ChangeBackgroundColorToolStripMenuItem.Text = "Change Background Color"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(661, 209)
+        Me.ClientSize = New System.Drawing.Size(661, 347)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
@@ -131,10 +161,15 @@ Partial Class Form1
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MMUEdit As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FullScreenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UndoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RedoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddSourceControlToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents ChangeBackgroundColorToolStripMenuItem As ToolStripMenuItem
 End Class
