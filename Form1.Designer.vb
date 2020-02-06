@@ -22,98 +22,92 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.greeting = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnLoginIn = New System.Windows.Forms.Button()
-        Me.lblMessage = New System.Windows.Forms.Label()
-        Me.txtnum = New System.Windows.Forms.TextBox()
-        Me.txtsum = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FullScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'MenuStrip1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Khaki
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(57, 35)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Username"
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(661, 24)
+        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'greeting
+        'FileToolStripMenuItem
         '
-        Me.greeting.AutoSize = True
-        Me.greeting.BackColor = System.Drawing.Color.Khaki
-        Me.greeting.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.greeting.Location = New System.Drawing.Point(57, 5)
-        Me.greeting.Name = "greeting"
-        Me.greeting.Size = New System.Drawing.Size(52, 13)
-        Me.greeting.TabIndex = 0
-        Me.greeting.Text = "Greetings"
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
         '
-        'txtUsername
+        'EditToolStripMenuItem
         '
-        Me.txtUsername.Location = New System.Drawing.Point(140, 35)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(100, 20)
-        Me.txtUsername.TabIndex = 1
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
         '
-        'txtPassword
+        'ViewToolStripMenuItem
         '
-        Me.txtPassword.Location = New System.Drawing.Point(140, 79)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(100, 20)
-        Me.txtPassword.TabIndex = 3
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FullScreenToolStripMenuItem})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ViewToolStripMenuItem.Text = "View"
         '
-        'Label2
+        'ToolsToolStripMenuItem
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Khaki
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(57, 79)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Password"
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.ToolsToolStripMenuItem.Text = "Tools"
         '
-        'btnLoginIn
+        'HelpToolStripMenuItem
         '
-        Me.btnLoginIn.BackColor = System.Drawing.Color.DarkBlue
-        Me.btnLoginIn.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnLoginIn.Location = New System.Drawing.Point(116, 140)
-        Me.btnLoginIn.Name = "btnLoginIn"
-        Me.btnLoginIn.Size = New System.Drawing.Size(75, 40)
-        Me.btnLoginIn.TabIndex = 4
-        Me.btnLoginIn.Text = "Generate Buttons"
-        Me.btnLoginIn.UseVisualStyleBackColor = False
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'lblMessage
+        'OpenToolStripMenuItem
         '
-        Me.lblMessage.AutoSize = True
-        Me.lblMessage.Location = New System.Drawing.Point(41, 187)
-        Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(39, 13)
-        Me.lblMessage.TabIndex = 5
-        Me.lblMessage.Text = "Label3"
+        Me.OpenToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenFolderToolStripMenuItem, Me.OpenFileToolStripMenuItem})
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenToolStripMenuItem.Text = "Open"
         '
-        'txtnum
+        'OpenFolderToolStripMenuItem
         '
-        Me.txtnum.Location = New System.Drawing.Point(215, 151)
-        Me.txtnum.Name = "txtnum"
-        Me.txtnum.Size = New System.Drawing.Size(56, 20)
-        Me.txtnum.TabIndex = 6
+        Me.OpenFolderToolStripMenuItem.Name = "OpenFolderToolStripMenuItem"
+        Me.OpenFolderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenFolderToolStripMenuItem.Text = "Open Folder"
         '
-        'txtsum
+        'OpenFileToolStripMenuItem
         '
-        Me.txtsum.Location = New System.Drawing.Point(381, 151)
-        Me.txtsum.Name = "txtsum"
-        Me.txtsum.Size = New System.Drawing.Size(100, 20)
-        Me.txtsum.TabIndex = 7
-        Me.txtsum.Text = "0"
+        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenFileToolStripMenuItem.Text = "Open File"
+        '
+        'FullScreenToolStripMenuItem
+        '
+        Me.FullScreenToolStripMenuItem.Name = "FullScreenToolStripMenuItem"
+        Me.FullScreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FullScreenToolStripMenuItem.Text = "FullScreen"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'Form1
         '
@@ -121,29 +115,26 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(661, 209)
-        Me.Controls.Add(Me.txtsum)
-        Me.Controls.Add(Me.txtnum)
-        Me.Controls.Add(Me.lblMessage)
-        Me.Controls.Add(Me.btnLoginIn)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtUsername)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.greeting)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents greeting As Label
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents txtPassword As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents btnLoginIn As Button
-    Friend WithEvents lblMessage As Label
-    Friend WithEvents txtnum As TextBox
-    Friend WithEvents txtsum As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFolderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FullScreenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 End Class
