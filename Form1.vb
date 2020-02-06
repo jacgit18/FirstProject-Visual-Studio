@@ -20,4 +20,18 @@
 
 
     End Sub
+
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+        Dim ourdialogresult As DialogResult
+
+        ourdialogresult = FontDialog1.ShowDialog
+        If ourdialogresult = DialogResult.OK Then
+            Dim myfont = FontDialog1.Font
+
+            Me.Font = myfont
+
+
+
+        End If
+    End Sub
 End Class
