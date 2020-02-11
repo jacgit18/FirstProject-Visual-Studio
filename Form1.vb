@@ -1,46 +1,45 @@
 ﻿Option Strict Off
 
 Public Class Form1
-    Private Sub xyz(sender As Object, e As EventArgs) Handles btnLoginIn.Click, Label1.Click
+    Private Sub xyz_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
 
-        If txtUsername.Text.ToLower = txtPassword.Text.ToLower Then
-            lblMessage.Text = "success"
-        Else
-            lblMessage.Text = "not success"
-        End If
+        Dim mygraphics As Graphics
+        mygraphics = e.Graphics
 
-        ' Responsible for deleting buttons
-        For j = Me.Controls.Count - 1 To 0 Step -1
-            If Me.Controls(j).Name.Length > 10 AndAlso Me.Controls(j).Name.Substring(0, 10) = "New Button" Then
-                Me.Controls.RemoveAt(j)
-            End If
+        Dim mygraphics1 As Graphics
+        mygraphics1 = e.Graphics
+
+        Dim x, y, ssize As Integer
+
+        x = 100 : y = 100
+
+        ssize = 40
+
+        Dim mybrush = New SolidBrush(Drawing.Color.DarkSeaGreen)
+        mygraphics.FillRectangle(mybrush, 100, 100, 8 * ssize, 8 * ssize)
+        mybrush = New SolidBrush(Drawing.Color.Crimson)
+
+        For i = 1 To 8
+
+            If i Mod 2 = 1 Then x = x + ssize
+
+
+            For j = 1 To 4
+
+                mygraphics.FillRectangle(mybrush, x, y, ssize, ssize)
+                x = x + (2 * ssize)
+
+
+            Next
+            y = y + ssize
+            x = 100
+
+
         Next
-        'Runtime code
-        For i = 1 To Integer.Parse(txtnum.Text)
-            'MessageBox.Show("making button " + i.ToString)
-            Dim nextbutton As Button
-            nextbutton = New System.Windows.Forms.Button()
-            nextbutton.BackColor = System.Drawing.Color.DarkBlue
-            nextbutton.ForeColor = System.Drawing.SystemColors.HighlightText
-            nextbutton.Location = New System.Drawing.Point(116, 140 + (i * 45))
-            nextbutton.Name = "New Button " + i.ToString
-            nextbutton.Size = New System.Drawing.Size(75, 40)
-            nextbutton.Text = "Button " + i.ToString
-            AddHandler nextbutton.Click, AddressOf newbuttonclick
-            Me.Controls.Add(nextbutton)
-        Next
-        Me.Size = New System.Drawing.Size(Me.Size.Width, 245 + (Integer.Parse(txtnum.Text) * 45))
-    End Sub
-    Private Sub newbuttonclick(sender As Object, e As EventArgs)
-        '  MessageBox.Show("a button was clicked")
-        Dim clickbutton As Button
-        ' casting
-        clickbutton = CType(sender, Button)
-        ' MessageBox.Show(clickbutton.Name)
-        Dim number As Integer
-        number = clickbutton.Name.Substring(11)
-        txtsum.Text = txtsum.Text + number
+
+
 
     End Sub
+
 
 End Class
