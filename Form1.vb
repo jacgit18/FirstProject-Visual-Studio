@@ -13,4 +13,5 @@ Public Class Form1
         MessageBox.Show("hey", "whatsup", MessageBoxButtons.YesNoCancel)
         MessageBox.Show("hey", "whatsup", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error)
         MsgBox("hey") 'otherway    End Sub
+    End Sub
 End Class
