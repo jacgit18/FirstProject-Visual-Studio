@@ -1,5 +1,10 @@
 ﻿Option Strict Off
-
+'The Option Strict Off statement turns off error and warning 
+'checking for all three conditions, even If the associated IDE 
+'settings specify To turn On these errors Or warnings. The 
+'Option Strict On statement turns On Error And warning checking 
+'For all three conditions, even If the associated IDE settings 
+'specify To turn off these errors Or warnings.
 Public Class Form1
     Private Sub xyz_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
 
